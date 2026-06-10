@@ -9,6 +9,7 @@ jobs:
 deploy:
 runs-on: ubuntu-latest
 
+
 steps:
   - name: Checkout code
     uses: actions/checkout@v4
@@ -24,5 +25,3 @@ steps:
   - name: Upload website files
     run: |
       gsutil -m cp -r *.html *.css gs://cloud-course-webtest/
-
-
